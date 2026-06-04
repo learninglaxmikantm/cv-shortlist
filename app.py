@@ -7,6 +7,9 @@ from ui_pages.upload_jd import show_upload_jd
 from ui_pages.upload_resume import show_upload_resume
 from ui_pages.results import show_results
 
+import os
+
+os.makedirs("uploads", exist_ok=True)
 
 # Session Initialization
 
