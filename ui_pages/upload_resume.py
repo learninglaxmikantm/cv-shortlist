@@ -16,7 +16,12 @@ from database.mongodb import (
     candidates_collection
 )
 
-UPLOAD_FOLDER = "uploads"
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+UPLOAD_FOLDER = os.path.join(BASE_DIR, "uploads")
+
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
 def show_upload_resume():
